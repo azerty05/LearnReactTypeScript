@@ -28,23 +28,21 @@ git clone https://github.com/azerty05/LearnReactTypeScript.git
 cd LearnReactTypeScript
 
 
-2. Installation des dépendances
-Installez les dépendances nécessaires via npm
-
-
+# Installation des dépendances
 
 npm install
 
 
 
-
+## Lancer l'application en mode développement
 
 npm run dev
 
-
+## Construisez et lancez les conteneurs avec Docker Compose
 
 docker-compose up --build
 
+## Arborescence du projet
 
 LearnReactTypeScript/
 ├── public/               # Fichiers publics accessibles dans l'application
@@ -60,7 +58,7 @@ LearnReactTypeScript/
 ├── tsconfig.json         # Configuration TypeScript
 └── vite.config.js        # Configuration Vite
 
-
+## Commandes utile
 
 npm run dev : Démarre l'application en mode développement.
 npm run build : Compile l'application pour la production.
