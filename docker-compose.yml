@@ -1,0 +1,10 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app # Monte le répertoire de l'application
+      - /app/node_modules # Préserve le dossier node_modules

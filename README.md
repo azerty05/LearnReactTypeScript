@@ -1,55 +1,68 @@
-<<<<<<< HEAD
 # LearnReactTypeScript
-C'est projet pour me permettre dapprendre le réact typescript
-=======
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ce projet a pour objectif de me permettre d'apprendre et d'approfondir mes compétences en React et TypeScript, tout en utilisant Vite pour un développement rapide et Docker pour une gestion simplifiée des environnements.
 
-Currently, two official plugins are available:
+## Technologies utilisées
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React** : Librairie JavaScript pour la création d'interfaces utilisateur.
+- **TypeScript** : Superset de JavaScript ajoutant un typage statique.
+- **Vite** : Outil de build rapide pour les projets front-end.
+- **Docker** : Conteneurisation pour faciliter le déploiement et la gestion des dépendances.
 
-## Expanding the ESLint configuration
+## Prérequis
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 
-- Configure the top-level `parserOptions` property like this:
+- [Node.js](https://nodejs.org/en/) (version 14 ou supérieure)
+- [Docker](https://www.docker.com/)
+- [Git](https://git-scm.com/)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Installation
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### 1. Cloner le dépôt
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Commencez par cloner ce dépôt sur votre machine locale :
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
->>>>>>> c558044 (Initialle)
+```bash
+git clone https://github.com/azerty05/LearnReactTypeScript.git
+cd LearnReactTypeScript
+
+
+2. Installation des dépendances
+Installez les dépendances nécessaires via npm
+
+
+
+npm install
+
+
+
+
+
+npm run dev
+
+
+
+docker-compose up --build
+
+
+LearnReactTypeScript/
+├── public/               # Fichiers publics accessibles dans l'application
+├── src/                  # Code source de l'application React
+│   ├── App.tsx           # Composant principal
+│   ├── index.tsx         # Point d'entrée de l'application
+│   └── ...               # Autres composants
+├── .dockerignore         # Fichiers à ignorer par Docker
+├── Dockerfile            # Configuration Docker pour l'application
+├── Dockerfile.dev        # Dockerfile pour le développement
+├── docker-compose.yml    # Configuration Docker Compose
+├── package.json          # Dépendances et scripts
+├── tsconfig.json         # Configuration TypeScript
+└── vite.config.js        # Configuration Vite
+
+
+
+npm run dev : Démarre l'application en mode développement.
+npm run build : Compile l'application pour la production.
+docker-compose up : Lance les conteneurs Docker pour exécuter l'application.
+docker-compose down : Arrête et supprime les conteneurs Docker.
